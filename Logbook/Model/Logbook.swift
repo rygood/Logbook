@@ -14,18 +14,10 @@ struct Logbook: BlackbirdModel {
     @BlackbirdColumn var modifiedDate: Date
     @BlackbirdColumn var name: String
 
-    private init(id: String, creationDate: Date, modifiedDate: Date, name: String) {
-        self.id = id
-        self.creationDate = creationDate
-        self.modifiedDate = modifiedDate
-        self.name = name
-    }
-
     init(name: String) {
-        self.init(id: UUID().uuidString,
-             creationDate: Date.now,
-             modifiedDate: Date.now,
-             name: name
-        )
+		self.id = UUID().uuidString
+		self.creationDate = Date.now
+		self.modifiedDate = Date.now
+		self.name = name
     }
 }
