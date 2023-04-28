@@ -11,7 +11,10 @@ import Blackbird
 struct LogbooksView: View {
     @Environment(\.blackbirdDatabase) var db
     
-    @BlackbirdLiveModels({ try await Logbook.read(from: $0, orderBy: .ascending(\.$name)) }) var logbooks
+    @BlackbirdLiveModels({
+		try await Logbook.read(from: $0,
+							   orderBy: .ascending(\.$name))
+	}) var logbooks
 
     @State private var showAddLogbookView = false
 
@@ -21,7 +24,8 @@ struct LogbooksView: View {
                 if logbooks.didLoad && !logbooks.results.isEmpty {
                     ForEach(logbooks.results) { logbook in
                         NavigationLink {
-                            Text(logbook.name)
+							EntriesView(logbook: logbook.liveModel)
+								.navigationBarTitleDisplayMode(.inline)
                         } label: {
                             Text(logbook.name)
                         }
