@@ -23,6 +23,7 @@
 		94DB538A29FAEE620065895F /* LogbooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB538929FAEE620065895F /* LogbooksView.swift */; };
 		94DB538D29FC196C0065895F /* AddLogbookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB538C29FC196C0065895F /* AddLogbookView.swift */; };
 		94DB539029FC4EF90065895F /* DBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB538F29FC4EF90065895F /* DBError.swift */; };
+		94DB539329FC50AE0065895F /* FileManager+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB539229FC50AE0065895F /* FileManager+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		94DB538929FAEE620065895F /* LogbooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbooksView.swift; sourceTree = "<group>"; };
 		94DB538C29FC196C0065895F /* AddLogbookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogbookView.swift; sourceTree = "<group>"; };
 		94DB538F29FC4EF90065895F /* DBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBError.swift; sourceTree = "<group>"; };
+		94DB539229FC50AE0065895F /* FileManager+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		9497508E29D213ED00DFEBA0 /* Logbook */ = {
 			isa = PBXGroup;
 			children = (
+				94DB539129FC507D0065895F /* Utility */,
 				94DB538E29FC4ED80065895F /* Error */,
 				94DB538429FAE7A20065895F /* Resources */,
 				94DB537929FAB7890065895F /* Model */,
@@ -193,6 +196,14 @@
 				94DB538F29FC4EF90065895F /* DBError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		94DB539129FC507D0065895F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				94DB539229FC50AE0065895F /* FileManager+Utilities.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +349,7 @@
 				94DB539029FC4EF90065895F /* DBError.swift in Sources */,
 				94DB538A29FAEE620065895F /* LogbooksView.swift in Sources */,
 				94DB537B29FAB7B10065895F /* Item.swift in Sources */,
+				94DB539329FC50AE0065895F /* FileManager+Utilities.swift in Sources */,
 				9497509029D213ED00DFEBA0 /* LogbookApp.swift in Sources */,
 				9497509729D213ED00DFEBA0 /* UpcomingView.swift in Sources */,
 				949750C329D2326700DFEBA0 /* MainView.swift in Sources */,
