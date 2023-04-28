@@ -54,8 +54,3 @@ struct LogbookApp: App {
         }
     }
 }
-
-enum DBError: Error {
-case getAppSupportDirectoryPath
-case createAppSupportDirectory
-}
