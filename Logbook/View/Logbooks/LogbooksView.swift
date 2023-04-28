@@ -11,7 +11,7 @@ import Blackbird
 struct LogbooksView: View {
     @Environment(\.blackbirdDatabase) var db
     
-    @BlackbirdLiveModels({ try await Logbook.read(from: $0, orderBy: .ascending(\.$creationDate)) }) var logbooks
+    @BlackbirdLiveModels({ try await Logbook.read(from: $0, orderBy: .ascending(\.$name)) }) var logbooks
 
     @State private var showAddLogbookView = false
 
