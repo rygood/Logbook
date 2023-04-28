@@ -21,6 +21,7 @@
 		94DB537F29FAB9EA0065895F /* Logbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB537E29FAB9EA0065895F /* Logbook.swift */; };
 		94DB538729FAE7A20065895F /* Logbooks_Test.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 94DB538529FAE7A20065895F /* Logbooks_Test.sqlite3 */; };
 		94DB538A29FAEE620065895F /* LogbooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB538929FAEE620065895F /* LogbooksView.swift */; };
+		94DB538D29FC196C0065895F /* AddLogbookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB538C29FC196C0065895F /* AddLogbookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		94DB537E29FAB9EA0065895F /* Logbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logbook.swift; sourceTree = "<group>"; };
 		94DB538529FAE7A20065895F /* Logbooks_Test.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Logbooks_Test.sqlite3; sourceTree = "<group>"; };
 		94DB538929FAEE620065895F /* LogbooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbooksView.swift; sourceTree = "<group>"; };
+		94DB538C29FC196C0065895F /* AddLogbookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogbookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +152,7 @@
 			children = (
 				949750C229D2326700DFEBA0 /* MainView.swift */,
 				9497509629D213ED00DFEBA0 /* UpcomingView.swift */,
-				94DB538929FAEE620065895F /* LogbooksView.swift */,
+				94DB538B29FC18E50065895F /* Logbooks */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +173,15 @@
 				94DB538529FAE7A20065895F /* Logbooks_Test.sqlite3 */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		94DB538B29FC18E50065895F /* Logbooks */ = {
+			isa = PBXGroup;
+			children = (
+				94DB538929FAEE620065895F /* LogbooksView.swift */,
+				94DB538C29FC196C0065895F /* AddLogbookView.swift */,
+			);
+			path = Logbooks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DB538D29FC196C0065895F /* AddLogbookView.swift in Sources */,
 				94DB537D29FAB82A0065895F /* Entry.swift in Sources */,
 				94DB537F29FAB9EA0065895F /* Logbook.swift in Sources */,
 				94DB538A29FAEE620065895F /* LogbooksView.swift in Sources */,

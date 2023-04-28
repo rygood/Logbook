@@ -13,15 +13,17 @@ struct LogbooksView: View {
     
     @BlackbirdLiveModels({ try await Logbook.read(from: $0, orderBy: .ascending(\.$creationDate)) }) var logbooks
 
+    @State private var showAddLogbookView = false
+
     var body: some View {
         NavigationView {
             List {
                 if logbooks.didLoad && !logbooks.results.isEmpty {
                     ForEach(logbooks.results) { logbook in
                         NavigationLink {
-                            Text("\(logbook.name) at \(logbook.creationDate, formatter: itemFormatter)")
+                            Text(logbook.name)
                         } label: {
-                            Text("\(logbook.name) - \(logbook.creationDate, formatter: itemFormatter)")
+                            Text(logbook.name)
                         }
                     }
                     .onDelete(perform: { indexSet in
@@ -41,9 +43,12 @@ struct LogbooksView: View {
 #endif
                 ToolbarItem {
                     Button(action: {
-                        Task { await addItem() }
+                        showAddLogbookView.toggle()
                     }) {
                         Label("Add Logbook", systemImage: "plus")
+                    }
+                    .sheet(isPresented: $showAddLogbookView) {
+                        AddLogbookView()
                     }
                 }
 
@@ -54,13 +59,6 @@ struct LogbooksView: View {
                 }
             }
         }
-    }
-
-    private func addItem() async {
-        guard let db else { return }
-
-        let logbook = Logbook(name: UUID().uuidString)
-        try! await logbook.write(to: db)
     }
 
     private func deleteItems(offsets: IndexSet) async {
