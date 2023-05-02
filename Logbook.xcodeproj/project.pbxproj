@@ -26,6 +26,7 @@
 		94DB539329FC50AE0065895F /* FileManager+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB539229FC50AE0065895F /* FileManager+Utilities.swift */; };
 		94DB539729FC62D40065895F /* EntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB539629FC62D40065895F /* EntriesView.swift */; };
 		94DB539829FC67BF0065895F /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB539529FC5BEE0065895F /* AddEntryView.swift */; };
+		94DB553C2A0193CF0065895F /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB553B2A0193CF0065895F /* EntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		94DB539229FC50AE0065895F /* FileManager+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Utilities.swift"; sourceTree = "<group>"; };
 		94DB539529FC5BEE0065895F /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryView.swift; sourceTree = "<group>"; };
 		94DB539629FC62D40065895F /* EntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesView.swift; sourceTree = "<group>"; };
+		94DB553B2A0193CF0065895F /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			children = (
 				94DB539529FC5BEE0065895F /* AddEntryView.swift */,
 				94DB539629FC62D40065895F /* EntriesView.swift */,
+				94DB553B2A0193CF0065895F /* EntryView.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94DB538D29FC196C0065895F /* AddLogbookView.swift in Sources */,
+				94DB553C2A0193CF0065895F /* EntryView.swift in Sources */,
 				94DB537D29FAB82A0065895F /* Entry.swift in Sources */,
 				94DB537F29FAB9EA0065895F /* Logbook.swift in Sources */,
 				94DB539829FC67BF0065895F /* AddEntryView.swift in Sources */,

@@ -19,11 +19,14 @@ struct EntriesView: View {
 	var entriesUpdater = Entry.ArrayUpdater()
 
     var body: some View {
-		NavigationView {
 			List {
 				if entries.didLoad && !entries.results.isEmpty {
 					ForEach(entries.results) { entry in
-						Text(entry.name)
+						NavigationLink(destination: {
+							EntryView()
+						}, label: {
+							Text(entry.name)
+						})
 					}
 					.onDelete(perform: { indexSet in
 						Task {
@@ -56,14 +59,8 @@ struct EntriesView: View {
 						AddEntryView(logbookId: logbook?.$id.wrappedValue)
 					}
 				}
-
-				ToolbarItem(placement: .navigationBarLeading) {
-					Text("Entries")
-						.font(.title)
-						.fontWeight(.heavy)
-				}
 			}
-		}
+			.navigationTitle("Entries")
     }
 
 	private func deleteItems(offsets: IndexSet) async {
