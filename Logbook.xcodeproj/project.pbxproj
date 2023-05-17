@@ -27,6 +27,7 @@
 		94DB539729FC62D40065895F /* EntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB539629FC62D40065895F /* EntriesView.swift */; };
 		94DB539829FC67BF0065895F /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB539529FC5BEE0065895F /* AddEntryView.swift */; };
 		94DB553C2A0193CF0065895F /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB553B2A0193CF0065895F /* EntryView.swift */; };
+		94DB553F2A019DE80065895F /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB553E2A019DE80065895F /* EntryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		94DB539529FC5BEE0065895F /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryView.swift; sourceTree = "<group>"; };
 		94DB539629FC62D40065895F /* EntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesView.swift; sourceTree = "<group>"; };
 		94DB553B2A0193CF0065895F /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		94DB553E2A019DE80065895F /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				94DB537A29FAB7B10065895F /* Item.swift */,
 				94DB537C29FAB82A0065895F /* Entry.swift */,
 				94DB537E29FAB9EA0065895F /* Logbook.swift */,
+				94DB553D2A019DCA0065895F /* ViewModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +224,14 @@
 				94DB553B2A0193CF0065895F /* EntryView.swift */,
 			);
 			path = Entry;
+			sourceTree = "<group>";
+		};
+		94DB553D2A019DCA0065895F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94DB553E2A019DE80065895F /* EntryViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +374,7 @@
 				94DB538D29FC196C0065895F /* AddLogbookView.swift in Sources */,
 				94DB553C2A0193CF0065895F /* EntryView.swift in Sources */,
 				94DB537D29FAB82A0065895F /* Entry.swift in Sources */,
+				94DB553F2A019DE80065895F /* EntryViewModel.swift in Sources */,
 				94DB537F29FAB9EA0065895F /* Logbook.swift in Sources */,
 				94DB539829FC67BF0065895F /* AddEntryView.swift in Sources */,
 				94DB539029FC4EF90065895F /* DBError.swift in Sources */,

@@ -22,4 +22,11 @@ struct Entry: BlackbirdModel {
 		self.id = UUID().uuidString
 		self.date = Date.now
 	}
+
+    mutating func update(from viewModel: EntryViewModel) {
+        self.logbookId = viewModel.logbookId
+        self.date = viewModel.date
+        self.name = viewModel.name
+        self.note = viewModel.note
+    }
 }

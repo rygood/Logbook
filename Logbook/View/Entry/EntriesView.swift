@@ -19,22 +19,28 @@ struct EntriesView: View {
 	var entriesUpdater = Entry.ArrayUpdater()
 
     var body: some View {
-			List {
-				if entries.didLoad && !entries.results.isEmpty {
-					ForEach(entries.results) { entry in
-						NavigationLink(destination: {
-							EntryView()
-						}, label: {
-							Text(entry.name)
-						})
-					}
-					.onDelete(perform: { indexSet in
-						Task {
-							await deleteItems(offsets: indexSet)
-						}
-					})
+			Group {
+				if entries.didLoad {
+                    List {
+                        if !entries.results.isEmpty {
+                            ForEach(entries.results) { entry in
+                                NavigationLink(destination: {
+                                    EntryView(entry: entry)
+                                }, label: {
+                                    Text(entry.name)
+                                })
+                            }
+                            .onDelete(perform: { indexSet in
+                                Task {
+                                    await deleteItems(offsets: indexSet)
+                                }
+                            })
+                        } else {
+                            Text("No Entries")
+                        }
+                    }
 				} else {
-					Text("No Entries")
+					ProgressView()
 				}
 			}
 			.onAppear {
