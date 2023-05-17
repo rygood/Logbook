@@ -23,7 +23,7 @@ struct EntryView: View {
             if didLoad {
                 List {
                     TextField("Name", text: $entryViewModel.name)
-                    Text(entryViewModel.date.formatted())
+                    DatePicker("Date", selection: $entryViewModel.date)
                     TextField("Notes", text: $entryViewModel.note, axis: .vertical)
                         .lineLimit(2...5)
                 }
