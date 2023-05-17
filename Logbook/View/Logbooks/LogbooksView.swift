@@ -39,6 +39,7 @@ struct LogbooksView: View {
                     Text("No Logbooks")
                 }
             }
+            .listStyle(.insetGrouped)
             .toolbar {
 #if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -62,6 +63,8 @@ struct LogbooksView: View {
                         .fontWeight(.heavy)
                 }
             }
+            Text("Select or create a Logbook")
+                
         }
     }
 
