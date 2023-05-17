@@ -24,7 +24,8 @@ struct EntryView: View {
                 List {
                     TextField("Name", text: $entryViewModel.name)
                     Text(entryViewModel.date.formatted())
-                    TextField("Notes", text: $entryViewModel.note)
+                    TextField("Notes", text: $entryViewModel.note, axis: .vertical)
+                        .lineLimit(2...5)
                 }
             } else {
                 ProgressView()
