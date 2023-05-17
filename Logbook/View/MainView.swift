@@ -9,21 +9,28 @@ import SwiftUI
 import Blackbird
 
 struct MainView: View {
+    @State var selectedTabIndex: TabIndex = .logbooks
+
+    enum TabIndex: Int {
+        case upcoming
+        case logbooks
+    }
 
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTabIndex) {
             UpcomingView()
                 .tabItem {
                     Label("Upcoming", systemImage: "hourglass")
-                }
+                }.tag(TabIndex.upcoming)
 
             LogbooksView()
                 .tabItem {
                     Label("Logbooks", systemImage: "text.book.closed")
-                }
+                }.tag(TabIndex.logbooks)
         }
     }
 }
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

@@ -13,19 +13,23 @@ struct UpcomingView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                if logbooks.didLoad && !logbooks.results.isEmpty {
-                    ForEach(logbooks.results) { logbook in
-                        NavigationLink {
-                            Text("Item at \(logbook.creationDate, formatter: itemFormatter)")
-                        } label: {
-                            Text(logbook.creationDate, formatter: itemFormatter)
+                if logbooks.didLoad {
+                    List {
+                        if !logbooks.results.isEmpty {
+                            ForEach(logbooks.results) { logbook in
+                                NavigationLink {
+                                    Text("Item at \(logbook.creationDate, formatter: itemFormatter)")
+                                } label: {
+                                    Text(logbook.creationDate, formatter: itemFormatter)
+                                }
+                            }
+                        } else {
+                            Text("No Logbooks")
                         }
                     }
                 } else {
-                    Text("No Logbooks")
+                    ProgressView()
                 }
-//                .onDelete(perform: deleteItems)
             }
             .toolbar {
 #if os(iOS)
@@ -45,28 +49,12 @@ struct UpcomingView: View {
                         .fontWeight(.heavy)
                 }
             }
-        }
     }
 
     private func addItem() {
         withAnimation {
             
         }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-//        withAnimation {
-//            offsets.map { logbooks[$0] }.forEach(viewContext.delete)
-//
-//            do {
-//                try viewContext.save()
-//            } catch {
-//                // Replace this implementation with code to handle the error appropriately.
-//                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//                let nsError = error as NSError
-//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//            }
-//        }
     }
 }
 
