@@ -14,22 +14,12 @@ struct AddEntryView: View {
     @FocusState private var isNameFieldFocused: Bool
 	@State var logbookId: String?
 	// TODO: Don't allow for empty names
-    @State var name: String = ""
-	@State var note: String?
+    @State var entryViewModel = EntryViewModel()
 
+    
     var body: some View {
         NavigationStack {
-            List {
-                TextField("Name", text: $name)
-                    .focused($isNameFieldFocused)
-                    .onSubmit {
-                        isNameFieldFocused.toggle()
-                        Task { await addItem() }
-                    }
-                    .onAppear {
-                        isNameFieldFocused = true
-                    }
-            }
+            EntryForm(entryViewModel: $entryViewModel)
             .navigationTitle("New Entry")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -56,9 +46,7 @@ struct AddEntryView: View {
         guard let db,
 		let logbookId else { return }
 
-        let entry = Entry(name: name,
-							logbookId: logbookId,
-							note: note)
+        let entry = Entry.now(logbookId, entryViewModel: entryViewModel)
         try! await entry.write(to: db)
         dismiss()
     }

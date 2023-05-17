@@ -15,6 +15,8 @@
 		949750B129D213EF00DFEBA0 /* LogbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949750B029D213EF00DFEBA0 /* LogbookUITests.swift */; };
 		949750B329D213EF00DFEBA0 /* LogbookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949750B229D213EF00DFEBA0 /* LogbookUITestsLaunchTests.swift */; };
 		949750C329D2326700DFEBA0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949750C229D2326700DFEBA0 /* MainView.swift */; };
+		94D70D9B2A1563D400458B91 /* EntryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D70D9A2A1563D400458B91 /* EntryForm.swift */; };
+		94D70D9D2A15645B00458B91 /* PreviewMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D70D9C2A15645B00458B91 /* PreviewMocks.swift */; };
 		94DB537829FAB7710065895F /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 94DB537729FAB7710065895F /* Blackbird */; };
 		94DB537B29FAB7B10065895F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB537A29FAB7B10065895F /* Item.swift */; };
 		94DB537D29FAB82A0065895F /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB537C29FAB82A0065895F /* Entry.swift */; };
@@ -60,6 +62,8 @@
 		949750B029D213EF00DFEBA0 /* LogbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookUITests.swift; sourceTree = "<group>"; };
 		949750B229D213EF00DFEBA0 /* LogbookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		949750C229D2326700DFEBA0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		94D70D9A2A1563D400458B91 /* EntryForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryForm.swift; sourceTree = "<group>"; };
+		94D70D9C2A15645B00458B91 /* PreviewMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMocks.swift; sourceTree = "<group>"; };
 		94DB537A29FAB7B10065895F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		94DB537C29FAB82A0065895F /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		94DB537E29FAB9EA0065895F /* Logbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logbook.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		9497508E29D213ED00DFEBA0 /* Logbook */ = {
 			isa = PBXGroup;
 			children = (
+				94D70D9E2A15646600458B91 /* Protocols */,
 				94DB539129FC507D0065895F /* Utility */,
 				94DB538E29FC4ED80065895F /* Error */,
 				94DB538429FAE7A20065895F /* Resources */,
@@ -170,6 +175,14 @@
 				94DB538B29FC18E50065895F /* Logbooks */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		94D70D9E2A15646600458B91 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94D70D9C2A15645B00458B91 /* PreviewMocks.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		94DB537929FAB7890065895F /* Model */ = {
@@ -222,6 +235,7 @@
 				94DB539529FC5BEE0065895F /* AddEntryView.swift */,
 				94DB539629FC62D40065895F /* EntriesView.swift */,
 				94DB553B2A0193CF0065895F /* EntryView.swift */,
+				94D70D9A2A1563D400458B91 /* EntryForm.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -380,8 +394,10 @@
 				94DB539029FC4EF90065895F /* DBError.swift in Sources */,
 				94DB538A29FAEE620065895F /* LogbooksView.swift in Sources */,
 				94DB537B29FAB7B10065895F /* Item.swift in Sources */,
+				94D70D9B2A1563D400458B91 /* EntryForm.swift in Sources */,
 				94DB539329FC50AE0065895F /* FileManager+Utilities.swift in Sources */,
 				9497509029D213ED00DFEBA0 /* LogbookApp.swift in Sources */,
+				94D70D9D2A15645B00458B91 /* PreviewMocks.swift in Sources */,
 				9497509729D213ED00DFEBA0 /* UpcomingView.swift in Sources */,
 				949750C329D2326700DFEBA0 /* MainView.swift in Sources */,
 				94DB539729FC62D40065895F /* EntriesView.swift in Sources */,

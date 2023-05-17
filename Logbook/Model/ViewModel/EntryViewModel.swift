@@ -11,7 +11,7 @@ import Blackbird
 struct EntryViewModel {
 
 	var logbookId: String = ""
-    var date: Date = Date.distantPast
+    var date: Date = Date.now
 	var name: String = ""
 	var note: String = ""
 
@@ -31,4 +31,15 @@ extension EntryViewModel: Equatable {
         lhs.note == rhs.note
     }
 
+}
+
+extension EntryViewModel: Mock {
+
+    static func mockPreview() -> EntryViewModel {
+        EntryViewModel(logbookId: "123",
+                       date: Date.distantPast,
+                       name: "Preview Entry",
+                       note: "Noted."
+        )
+    }
 }

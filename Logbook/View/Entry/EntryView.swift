@@ -21,12 +21,7 @@ struct EntryView: View {
     var body: some View {
         Group {
             if didLoad {
-                List {
-                    TextField("Name", text: $entryViewModel.name)
-                    DatePicker("Date", selection: $entryViewModel.date)
-                    TextField("Notes", text: $entryViewModel.note, axis: .vertical)
-                        .lineLimit(2...5)
-                }
+                EntryForm(entryViewModel: $entryViewModel)
             } else {
                 ProgressView()
             }
@@ -52,9 +47,6 @@ struct EntryView: View {
 
 struct EntryView_Previews: PreviewProvider {
     static var previews: some View {
-		EntryView(entry: Entry(name: "Test",
-                               logbookId: "123",
-                               note: nil)
-		)
+        EntryView(entry: .mockPreview())
     }
 }
