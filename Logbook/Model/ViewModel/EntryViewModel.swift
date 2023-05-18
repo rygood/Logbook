@@ -33,9 +33,9 @@ extension EntryViewModel: Equatable {
 
 }
 
-extension EntryViewModel: Mock {
+extension EntryViewModel: Previewable {
 
-    static func mockPreview() -> EntryViewModel {
+    static func previewableMock() -> EntryViewModel {
         EntryViewModel(logbookId: "123",
                        date: Date.distantPast,
                        name: "Preview Entry",

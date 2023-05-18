@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "ED84587A-2826-4016-B84D-189D95076209",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Logbook.xcodeproj",
+          "identifier" : "9497508B29D213ED00DFEBA0",
+          "name" : "Logbook"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Logbook.xcodeproj",
+      "identifier" : "9497508B29D213ED00DFEBA0",
+      "name" : "Logbook"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Logbook.xcodeproj",
+        "identifier" : "949750A129D213EF00DFEBA0",
+        "name" : "LogbookTests"
+      }
+    }
+  ],
+  "version" : 1
+}

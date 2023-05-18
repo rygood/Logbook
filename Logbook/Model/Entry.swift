@@ -39,8 +39,8 @@ struct Entry: BlackbirdModel {
     }
 }
 
-extension Entry: Mock {
-    static func mockPreview() -> Entry {
+extension Entry: Previewable {
+    static func previewableMock() -> Entry {
         Entry(name: "123",
               date: Date.distantPast,
               logbookId: "Preview Entry",

@@ -43,6 +43,6 @@ struct EntryForm: View {
 
 struct EntryForm_Previews: PreviewProvider {
     static var previews: some View {
-        EntryForm(entryViewModel: .constant(.mockPreview()))
+        EntryForm(entryViewModel: .constant(.previewableMock()))
     }
 }
