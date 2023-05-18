@@ -37,6 +37,9 @@
 		94DF153D2A168CA500938588 /* Previewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D70D9C2A15645B00458B91 /* Previewable.swift */; };
 		94DF15412A168E2B00938588 /* EntryViewModel+Testable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF15402A168E2B00938588 /* EntryViewModel+Testable.swift */; };
 		94DF15472A16975F00938588 /* EntryViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF15462A16975F00938588 /* EntryViewModelSpec.swift */; };
+		94DF154A2A169F2900938588 /* Logbook+Testable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF15492A169F2900938588 /* Logbook+Testable.swift */; };
+		94DF154B2A169F4100938588 /* Logbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB537E29FAB9EA0065895F /* Logbook.swift */; };
+		94DF154D2A169F8E00938588 /* LogbookSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF154C2A169F8E00938588 /* LogbookSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,8 @@
 		94DF153E2A168D1000938588 /* Logbook.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Logbook.xctestplan; sourceTree = "<group>"; };
 		94DF15402A168E2B00938588 /* EntryViewModel+Testable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryViewModel+Testable.swift"; sourceTree = "<group>"; };
 		94DF15462A16975F00938588 /* EntryViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModelSpec.swift; sourceTree = "<group>"; };
+		94DF15492A169F2900938588 /* Logbook+Testable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logbook+Testable.swift"; sourceTree = "<group>"; };
+		94DF154C2A169F8E00938588 /* LogbookSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +263,7 @@
 			children = (
 				94DF15362A16881000938588 /* Entry+Testable.swift */,
 				94DF15422A168E3300938588 /* ViewModel */,
+				94DF15492A169F2900938588 /* Logbook+Testable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			children = (
 				9462B37D2A1681E700BC9570 /* EntrySpec.swift */,
 				94DF15482A16978900938588 /* ViewModel */,
+				94DF154C2A169F8E00938588 /* LogbookSpec.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -439,11 +446,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DF154D2A169F8E00938588 /* LogbookSpec.swift in Sources */,
 				94DF15352A1687AF00938588 /* Entry.swift in Sources */,
+				94DF154B2A169F4100938588 /* Logbook.swift in Sources */,
 				94DF153B2A168C8400938588 /* EntryViewModel.swift in Sources */,
 				94DF153D2A168CA500938588 /* Previewable.swift in Sources */,
 				94DF15412A168E2B00938588 /* EntryViewModel+Testable.swift in Sources */,
 				9462B37E2A1681E700BC9570 /* EntrySpec.swift in Sources */,
+				94DF154A2A169F2900938588 /* Logbook+Testable.swift in Sources */,
 				94DF15472A16975F00938588 /* EntryViewModelSpec.swift in Sources */,
 				94DF15372A16881000938588 /* Entry+Testable.swift in Sources */,
 				94DF15392A16883400938588 /* Testable.swift in Sources */,

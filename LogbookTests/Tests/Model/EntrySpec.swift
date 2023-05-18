@@ -11,7 +11,6 @@ import Nimble
 
 final class EntrySpec: QuickSpec {
 
-
     override class func spec() {
         var entry: Entry!
         var entryViewModel: EntryViewModel!

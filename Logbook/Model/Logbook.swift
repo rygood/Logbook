@@ -21,3 +21,11 @@ struct Logbook: BlackbirdModel {
 		self.name = name
     }
 }
+
+extension Logbook: Previewable {
+    static let _previewableName = "Previewable Logbook"
+
+    static func previewableMock() -> Logbook {
+        Logbook(name: _previewableName)
+    }
+}
