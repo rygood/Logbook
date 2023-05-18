@@ -40,11 +40,16 @@ struct Entry: BlackbirdModel {
 }
 
 extension Entry: Previewable {
+    static let _previewableName = "Previewable Entry"
+    static let _previewableDate = Date.distantPast
+    static let _previewableLogbookId = "12345678"
+    static let _previewableNote = "Noted."
+
     static func previewableMock() -> Entry {
-        Entry(name: "123",
-              date: Date.distantPast,
-              logbookId: "Preview Entry",
-              note: "Noted."
+        Entry(name: _previewableName,
+              date: _previewableDate,
+              logbookId: _previewableLogbookId,
+              note: _previewableNote
         )
     }
 }

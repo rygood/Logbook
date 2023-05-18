@@ -17,7 +17,6 @@ extension Entry: Testable {
         Entry(name: _testableName,
               date: _testableDate,
               logbookId: _testableLogbookId,
-              note: _testableNote
-        )
+              note: _testableNote)
     }
 }
