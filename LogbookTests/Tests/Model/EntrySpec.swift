@@ -15,13 +15,13 @@ final class EntrySpec: QuickSpec {
     override class func spec() {
         var entry: Entry!
         var entryViewModel: EntryViewModel!
-        var entryPreviewMock: Entry!
+        var entryPreviewableMock: Entry!
 
         describe("Entry") {
             beforeEach {
                 entry = .testableMock()
                 entryViewModel = .testableMock()
-                entryPreviewMock = .previewableMock()
+                entryPreviewableMock = .previewableMock()
             }
             
             it("should be initialized correctly") {
@@ -42,7 +42,7 @@ final class EntrySpec: QuickSpec {
                 expect(entryNow.date.distance(to: Date.now)).to(beLessThan(0.05))
             }
 
-            it("should be update correctly") {
+            it("should be updated correctly") {
                 let oldEntry = entry
                 let updatingEntryViewModel = EntryViewModel(logbookId: "987654321",
                                                             date: Date.distantFuture,
@@ -54,10 +54,10 @@ final class EntrySpec: QuickSpec {
             }
 
             it("should be previewable") {
-                expect(entryPreviewMock.logbookId).to(equal(Entry._previewableLogbookId))
-                expect(entryPreviewMock.name).to(equal(Entry._previewableName))
-                expect(entryPreviewMock.date).to(equal(Entry._previewableDate))
-                expect(entryPreviewMock.note).to(equal(Entry._previewableNote))
+                expect(entryPreviewableMock.logbookId).to(equal(Entry._previewableLogbookId))
+                expect(entryPreviewableMock.name).to(equal(Entry._previewableName))
+                expect(entryPreviewableMock.date).to(equal(Entry._previewableDate))
+                expect(entryPreviewableMock.note).to(equal(Entry._previewableNote))
             }
         }
     }

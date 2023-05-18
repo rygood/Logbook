@@ -34,12 +34,16 @@ extension EntryViewModel: Equatable {
 }
 
 extension EntryViewModel: Previewable {
+    static let _previewableName = "Previewable Entry"
+    static let _previewableDate = Date.distantPast
+    static let _previewableLogbookId = "12345678"
+    static let _previewableNote = "Noted."
 
     static func previewableMock() -> EntryViewModel {
-        EntryViewModel(logbookId: "123",
-                       date: Date.distantPast,
-                       name: "Preview Entry",
-                       note: "Noted."
+        EntryViewModel(logbookId: _previewableLogbookId,
+                       date: _previewableDate,
+                       name: _previewableName,
+                       note: _previewableNote
         )
     }
 }

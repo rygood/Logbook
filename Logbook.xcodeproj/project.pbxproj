@@ -36,6 +36,7 @@
 		94DF153B2A168C8400938588 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB553E2A019DE80065895F /* EntryViewModel.swift */; };
 		94DF153D2A168CA500938588 /* Previewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D70D9C2A15645B00458B91 /* Previewable.swift */; };
 		94DF15412A168E2B00938588 /* EntryViewModel+Testable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF15402A168E2B00938588 /* EntryViewModel+Testable.swift */; };
+		94DF15472A16975F00938588 /* EntryViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF15462A16975F00938588 /* EntryViewModelSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		94DF15382A16883400938588 /* Testable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testable.swift; sourceTree = "<group>"; };
 		94DF153E2A168D1000938588 /* Logbook.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Logbook.xctestplan; sourceTree = "<group>"; };
 		94DF15402A168E2B00938588 /* EntryViewModel+Testable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryViewModel+Testable.swift"; sourceTree = "<group>"; };
+		94DF15462A16975F00938588 /* EntryViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModelSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,8 +290,17 @@
 			isa = PBXGroup;
 			children = (
 				9462B37D2A1681E700BC9570 /* EntrySpec.swift */,
+				94DF15482A16978900938588 /* ViewModel */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		94DF15482A16978900938588 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94DF15462A16975F00938588 /* EntryViewModelSpec.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +444,7 @@
 				94DF153D2A168CA500938588 /* Previewable.swift in Sources */,
 				94DF15412A168E2B00938588 /* EntryViewModel+Testable.swift in Sources */,
 				9462B37E2A1681E700BC9570 /* EntrySpec.swift in Sources */,
+				94DF15472A16975F00938588 /* EntryViewModelSpec.swift in Sources */,
 				94DF15372A16881000938588 /* Entry+Testable.swift in Sources */,
 				94DF15392A16883400938588 /* Testable.swift in Sources */,
 			);
